@@ -10,14 +10,14 @@ class Insurance():
 
     def uniqueValues(self, index):#To find unique values ​​in certain inserted columns
         lst = list()
-        for element in self.OpenFile(index):
+        for element in self.openFile(index):
             if element not in lst:
                 lst.append(element)
         return lst
 
     def valueCounting(self, index):#To count occurrences of unique values
         dicio = {}   
-        for element in self.OpenFile(index):
+        for element in self.openFile(index):
             if element in dicio:
                 dicio[element] += 1
             else:
@@ -27,7 +27,7 @@ class Insurance():
     def filter(self, dicio: dict, index): #To choose by certain inserted conditions
         dio = {}
         for word, value in dicio.items():
-            if word in self.UniqueValues(index):
+            if word in self.uniqueValues(index):
                 dio[word] = value
         return sorted(dio.items(), key=lambda x:x[1], reverse=True)
 
