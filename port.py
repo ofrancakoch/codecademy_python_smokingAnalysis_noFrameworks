@@ -50,10 +50,10 @@ class Insurance():
         elif afirmneg == 'yes':
             print("\n\n\t\tSummary\n")
             print("\t\tSmokers\n")
-            print(f"There are 159 smoking male and 115 smoking female.\nProof:\n{self.Filter(dicio,1)}\n")
-            print(f"Top three ages that smoke, respectively: 19, 18, 43.\nProof:\n{self.Filter(dicio,0)}\n")
-            print(f"There are more smokers at southeast region and at northeast region, respectively.\nProof:\n{self.Filter(dicio,5)}\n")
-            print(f"There are more people without children that smoke.\nProof:\n{self.Filter(dicio,3)}\n")
+            print(f"There are 159 smoking male and 115 smoking female.\nProof:\n{self.filter(dicio,1)}\n")
+            print(f"Top three ages that smoke, respectively: 19, 18, 43.\nProof:\n{self.filter(dicio,0)}\n")
+            print(f"There are more smokers at southeast region and at northeast region, respectively.\nProof:\n{self.filter(dicio,5)}\n")
+            print(f"There are more people without children that smoke.\nProof:\n{self.filter(dicio,3)}\n")
     
 analysis = Insurance()
 analysis.smokingAnalysis('yes')
